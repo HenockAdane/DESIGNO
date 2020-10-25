@@ -1,0 +1,43 @@
+.projects{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    color: white;
+
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+// .web{
+//     grid-area: web; 3.75
+    // backgrund-image: url("/assets/home/desktop/image-web-design-large.jpg");
+
+
+// }
+
+// .app{
+//     grid-area: app;
+//     background-image: url("/assets/home/desktop/image-app-design.jpg");
+//     background-position: center;
+//     background-repeat: no-repeat;
+
+// }
+
+// .graphic{
+//     grid-area: graphic;
+//     background-image: url("/assets/home/desktop/image-graphic-design.jpg");
+//     background-position: center;
+//     background-repeat: no-repeat;
+
+// }

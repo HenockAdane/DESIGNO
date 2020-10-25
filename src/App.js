@@ -9,6 +9,9 @@ import {
 
 
 import Home from "./JScomponents/home"
+import WebProject from './JScomponents/webProject';
+import AppProject from './JScomponents/appProject';
+import GraphicProject from './JScomponents/graphicProject';
 
 function App() {
   return (
@@ -36,7 +39,29 @@ function App() {
         
       </header>
 
-      <Home />
+
+      <Switch>
+          <Route exact={true} path="/" render={()=>(
+            <Home />
+          )}  />
+
+          <Route exact={true} path="/web-design-projects" render={() =>(
+            <WebProject />
+          )} />
+
+          <Route exact={true} path="/app-design-projects" render={() =>(
+            <AppProject />
+            
+            )}/>
+
+            
+          <Route exact={true} path="/graphic-design-projects" render={() =>(
+            <GraphicProject />
+            
+            )}/>
+
+         
+    </Switch>
       
 
 

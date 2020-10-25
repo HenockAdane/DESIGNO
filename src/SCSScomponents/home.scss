@@ -1,6 +1,5 @@
 
 .home{
-    width: 1111px;
     min-width: 80vw;
     margin: 0 auto;
 }
@@ -46,44 +45,49 @@
 
 
 
-.projectGrid{
+.projectFlex{
     width: 100%;
-    min-height: 640px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "web app"
-    "web graphic";
-    border:1px solid;
-    gap: 5px;
+    height: 640px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15% 0 0 0;
 
-    .projects{
-        border: 1px solid;
-    }
-
-    .web{
-        grid-area: web;
+    .webProject{
+        width: 49%;
+        height: 100%;
         background-image: url("/assets/home/desktop/image-web-design-large.jpg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        color: white;
 
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
 
-    .app{
-        grid-area: app;
-        background-image: url("/assets/home/desktop/image-app-design.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
+    .projectsSmall{
+        width: 49%;
+        height:100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
     }
+}
 
-    .graphic{
-        grid-area: graphic;
-        background-image: url("/assets/home/desktop/image-graphic-design.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
 
-    }
+.triosFlex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15% 0;
 }

@@ -1,0 +1,24 @@
+.projectHero{
+    width: 1111px;
+    min-height: 252px;
+    max-width: 80vw;
+    margin: 0 auto;
+    background-color: #E7816B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+    .subHero{
+        width: 730px;
+        min-width: 65.7%;
+        min-height: 124px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+}
