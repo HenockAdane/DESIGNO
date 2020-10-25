@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import styles from "../SCSScomponents/webProject.module.scss"
 import ProjectHero from './projectHero'
 import ProjectsDivs from './projectsDiv'
+import ProjectTypeDiv from './projectTypeDiv';
+
 
 function WebProject() {
 
@@ -46,6 +48,15 @@ and bring memorable brand experiences." />
         <div className={styles.projectsFlex}>
             {state.projects.map(a => <ProjectsDivs img={a.img} title={a.title} description={a.description} />)}
         </div>
+
+        <div className={styles.otherProjects}>
+                
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-app-design.jpg" title="APP" to="/app-design-projects"/>
+
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-graphic-design.jpg" title="GRAPHIC" to="/graphic-design-projects"/>
+
+
+                </div>
             
         </div>
     )

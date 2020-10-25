@@ -1,0 +1,23 @@
+.about{
+    width: 1111px;
+    min-width: 80%;
+    min-height: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E7816B;
+    color: white;
+    margin: 10% 0;
+
+
+    .introDiv{
+        width: 40%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    img{
+        width: 45%;
+        height: 100%;
+    }
+}

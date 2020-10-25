@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import ProjectHero from './projectHero'
 import ProjectsDivs from './projectsDiv'
+import ProjectTypeDiv from './projectTypeDiv';
 import styles from "../SCSScomponents/appProject.module.scss"
 
 function AppProject() {
@@ -36,6 +37,15 @@ and bring memorable brand experiences." />
         <div className={styles.projectsFlex}>
             {state.projects.map(a => <ProjectsDivs img={a.img} title={a.title} description={a.description} />)}
         </div>
+
+        <div className={styles.otherProjects}>
+                
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-web-design-large.jpg" title="WEB" to="/web-design-projects"/>
+
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-graphic-design.jpg" title="GRAPHIC" to="/graphic-design-projects"/>
+
+
+                </div>
             
         </div>
     )

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import ProjectHero from './projectHero'
 import ProjectsDivs from './projectsDiv'
+import ProjectTypeDiv from './projectTypeDiv';
 import styles from "../SCSScomponents/graphicProject.module.scss"
 
 
@@ -32,6 +33,15 @@ function GraphicProject() {
         <div className={styles.projectsFlex}>
             {state.projects.map(a => <ProjectsDivs img={a.img} title={a.title} description={a.description} />)}
         </div>
+
+        <div className={styles.otherProjects}>
+                
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-app-design.jpg" title="APP" to="/app-design-projects"/>
+
+                <ProjectTypeDiv bkgroundImg="/assets/home/desktop/image-web-design-large.jpg" title="WEB" to="/web-design-projects"/>
+
+
+                </div>
             
         </div>
     )

@@ -12,6 +12,7 @@ import Home from "./JScomponents/home"
 import WebProject from './JScomponents/webProject';
 import AppProject from './JScomponents/appProject';
 import GraphicProject from './JScomponents/graphicProject';
+import OurCompany from './JScomponents/ourCompany';
 
 function App() {
   return (
@@ -21,12 +22,12 @@ function App() {
       <div className="App-secondaryHeader">
 
       <div className="headerLogoContainer">
-        <img className="headerLogo" src="/assets/shared/desktop/logo-dark.png" />
+        <Link to="/" ><img className="headerLogo" src="/assets/shared/desktop/logo-dark.png" /></Link>
       </div>
 
       <nav className="headerNav">
         <ul>
-          <Link className="header-links" to={"/"}>OUR COMPANY</Link>
+          <Link className="header-links" to={"/about-us"}>OUR COMPANY</Link>
           <Link className="header-links" to={"/"}>LOCATIONS</Link>
           <Link className="header-links" to={"/"}>CONTACT</Link>
         </ul>
@@ -57,6 +58,13 @@ function App() {
             
           <Route exact={true} path="/graphic-design-projects" render={() =>(
             <GraphicProject />
+            
+            )}/>
+
+            
+
+          <Route exact={true} path="/about-us" render={() =>(
+            <OurCompany />
             
             )}/>
 
