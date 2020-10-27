@@ -1,0 +1,57 @@
+// function formatDate(userDate) {
+//     // format from M/D/YYYY to YYYYMMDD
+//    let date =  userDate.split("/").reverse();
+//    let b = date.splice(4,2);
+//     date.splice(3,0,b)
+//     return date.join("")
+  
+//   }
+  
+//   console.log(formatDate("12/31/2014"));
+
+.locationDiv{
+    width: 1111px;
+    height: 326px;
+    display: flex;
+    justify-content: space-between;
+
+    .bold{
+        font-weight: bold;
+        margin: 0 0 3px 0;
+    }
+
+    .locationInfo{
+        width: 65.7%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:  #FDF3F0;
+        border-radius: 15px;
+
+        li{
+            list-style: none;
+        }
+        .locationMoreInfo{
+            width: 540px;
+            max-width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+    .imgContainer{
+        width: 31.5%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+
+    }
+
+
+}

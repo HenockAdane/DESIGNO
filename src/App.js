@@ -13,6 +13,8 @@ import WebProject from './JScomponents/webProject';
 import AppProject from './JScomponents/appProject';
 import GraphicProject from './JScomponents/graphicProject';
 import OurCompany from './JScomponents/ourCompany';
+import LocationDiv from './JScomponents/locationDiv';
+import Location from './JScomponents/location';
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
       <nav className="headerNav">
         <ul>
           <Link className="header-links" to={"/about-us"}>OUR COMPANY</Link>
-          <Link className="header-links" to={"/"}>LOCATIONS</Link>
+          <Link className="header-links" to={"/locations"}>LOCATIONS</Link>
           <Link className="header-links" to={"/"}>CONTACT</Link>
         </ul>
       </nav>
@@ -65,6 +67,12 @@ function App() {
 
           <Route exact={true} path="/about-us" render={() =>(
             <OurCompany />
+            
+            )}/>
+
+
+          <Route exact={true} path="/locations" render={() =>(
+            <Location />
             
             )}/>
 
