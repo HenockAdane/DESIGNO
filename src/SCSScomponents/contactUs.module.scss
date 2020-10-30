@@ -1,0 +1,89 @@
+.contactUs{
+    width: 1111px;
+    max-width: 100%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    color: white;
+    background-color: #E7816B;
+
+    .intro{
+        width: 540px;
+        max-width: 100%;
+        text-align: center;
+
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 540px;
+        max-width: 100%;
+        
+
+        input{
+            border: 1px none white;
+            border-bottom-style: solid;
+            padding: 12px;
+            width: 375px;
+            max-width: 95%;
+            margin: 10px 0;
+            color: white;
+            background-color: #E7816B;
+
+
+
+            &:focus{
+                outline-style: none;
+            }
+
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        textarea{
+            border: 1px none white;
+            border-bottom-style: solid;
+            width: 375px;
+            max-width: 95%;
+            height: 102px;
+            padding: 12px;
+            color: white;
+            background-color: #E7816B;
+
+            &:focus{
+                outline-style: none;
+            }
+
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        .submitBtn{
+            width: 152px;
+            height: 56px;
+            padding: 10px;
+            border: 1px solid;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: 0.4s all ease-in;
+            border-radius: 20px;
+            color: #E7816B;
+
+
+            &:hover{
+                color: white;
+                background-color: #E7816B;
+                border-radius: unset;
+
+            }
+        }
+    }
+}

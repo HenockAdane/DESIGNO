@@ -15,6 +15,7 @@ import GraphicProject from './JScomponents/graphicProject';
 import OurCompany from './JScomponents/ourCompany';
 import LocationDiv from './JScomponents/locationDiv';
 import Location from './JScomponents/location';
+import ContactUs from './JScomponents/contactUs';
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
 
       <nav className="headerNav">
         <ul>
-          <Link className="header-links" to={"/about-us"}>OUR COMPANY</Link>
-          <Link className="header-links" to={"/locations"}>LOCATIONS</Link>
-          <Link className="header-links" to={"/"}>CONTACT</Link>
+          <Link className="header-links" to={"/"}>HOME</Link>
+          <Link className="header-links" to={"/our-company"}>OUR COMPANY</Link>
+          <Link className="header-links" to={"/contacts"}>CONTACT</Link>
         </ul>
       </nav>
 
@@ -43,7 +44,7 @@ function App() {
       </header>
 
 
-      <Switch>
+      {/* <Switch>
           <Route exact={true} path="/" render={()=>(
             <Home />
           )}  />
@@ -65,20 +66,20 @@ function App() {
 
             
 
-          <Route exact={true} path="/about-us" render={() =>(
+          <Route exact={true} path="/our-company" render={() =>(
             <OurCompany />
             
             )}/>
 
 
-          <Route exact={true} path="/locations" render={() =>(
-            <Location />
+          <Route exact={true} path="/contacts" render={() =>(
+            <ContactUs />
             
             )}/>
 
          
     </Switch>
-      
+       */}
 
 
 

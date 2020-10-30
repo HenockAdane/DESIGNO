@@ -90,3 +90,18 @@
     justify-content: space-between;
     margin: 15% 0;
 }
+
+
+
+@media (max-width:768px){
+
+    .homeHero{
+        flex-direction: column;
+
+        .intro{
+            width: 100%;
+        }
+    }
+
+}
+    

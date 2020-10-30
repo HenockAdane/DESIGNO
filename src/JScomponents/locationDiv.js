@@ -1,10 +1,13 @@
 import React from 'react'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 import styles from "../SCSScomponents/locationDiv.module.scss"
 
 function LocationDiv(props) {
+
+    let position = [props.x,props.y]
     return (
-        <div className={styles.locationDiv}>
+        <div className={styles.locationDiv} style={{flexDirection: props.flexDirection}}>
 
         <div className={styles.locationInfo}>
             <h1>{props.name}</h1>
@@ -30,10 +33,17 @@ function LocationDiv(props) {
         
         {/* <div className={styles.imgContainer} style={{backgroundImage: `url(${props.img})`}}> */}
 
-        <div className={styles.imgContainer}>
-        {props.map}
 
-        </div>
+        <Map style={{zIndex: "-1", width: "50%", height: "326px"}} center={position} zoom={16}>
+        <TileLayer
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+    />
+    <Marker position={position}>
+      <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+    </Marker>
+  </Map>
+
             
         </div>
     )
