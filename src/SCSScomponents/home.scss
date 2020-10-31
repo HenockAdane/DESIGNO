@@ -25,6 +25,7 @@
         }
 
         .introBtn{
+            display: inline-block;
             padding: 15px 20px;
             border-radius: 10px;
             background-color: #FFAD9B;
@@ -50,7 +51,7 @@
     height: 640px;
     display: flex;
     justify-content: space-between;
-    margin: 15% 0 0 0;
+    margin: 15% 0;
 
     .webProject{
         width: 49%;
@@ -88,7 +89,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 15% 0;
 }
 
 
@@ -97,11 +97,47 @@
 
     .homeHero{
         flex-direction: column;
+        text-align: center;
 
         .intro{
+            width: 100%;
+
+            h1{
+                font-size: unset;
+            }
+
+            p{
+                margin: 10px 0 0 0;
+            }
+
+            .introBtn{
+                margin: 15px 0;
+            }
+        }
+
+        .introImg{
             width: 100%;
         }
     }
 
+    .projectFlex{
+        flex-direction: column;
+        height: 600px;
+
+        .webProject{
+            width: 100%;
+            height: 30%;
+        }
+
+        .projectsSmall{
+            height: 60%;
+            width: 100%;
+        }
+    }
+
+    .triosFlex{
+        justify-content: center;
+    }
+
 }
-    
+/*120 280*/

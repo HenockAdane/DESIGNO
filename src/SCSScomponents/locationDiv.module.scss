@@ -13,8 +13,10 @@
     width: 555.5px;
     max-width: 95%;
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     border: 1px solid;
+    text-align: center;
 
     h1{
         text-align: center;
@@ -26,7 +28,7 @@
     }
 
     .locationInfo{
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,5 +42,23 @@
 
     }
 
+
+}
+
+
+@media (max-width:768px){
+
+    .locationDiv{
+        flex-direction: column;
+
+        .locationInfo{
+            width: 100%;
+        }
+
+        map{
+            border-color: yellow;
+        }
+
+    }
 
 }

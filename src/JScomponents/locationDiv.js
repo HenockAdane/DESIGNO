@@ -34,7 +34,7 @@ function LocationDiv(props) {
         {/* <div className={styles.imgContainer} style={{backgroundImage: `url(${props.img})`}}> */}
 
 
-        <Map style={{zIndex: "-1", width: "50%", height: "326px"}} center={position} zoom={16}>
+        <Map className={styles.map} style={{zIndex: "-1", width: "100%", height: "326px"}} center={position} zoom={16}>
         <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"

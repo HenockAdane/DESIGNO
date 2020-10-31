@@ -43,7 +43,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
 }
 
 p{
@@ -52,7 +51,7 @@ p{
 
 .App{
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -99,7 +98,7 @@ p{
 
 footer{
   min-height: 20vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -107,14 +106,14 @@ footer{
   align-items: center;
   background-color: #1D1C1E;
   color: white;
+  margin: 292px 0 0 0;
   
 
   .abosoluteFooter{
-    width: 1111px;
-    min-width: 80%;
-    height: 292px;
+    width: 80%;
+    min-height: 292px;
     position: absolute;
-    top: -200px;
+    top: -130px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -143,7 +142,7 @@ footer{
   .subFooter{
     width: 80%;
     border: 1px solid;
-    margin: 10% 0 0 0;
+    margin: 292px 0;
 
     .footerDetails{
       width: 100%;
@@ -219,49 +218,104 @@ footer{
 
 
 @media (max-width:768px){
-
   
 
 
-  .App-secondaryHeader {
-    flex-direction: column;
-    width: 100%;
-  }
-  .App-secondaryHeader nav {
-    width: 100%;
-  }
-  .App-secondaryHeader nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  .App-secondaryHeader nav ul .header-links {
-    width: 100%;
-  }
-  
+  .App-header{
+    background-color: #E7816B;
 
-  .subFooter{
-    width: 100%;
-
-    .footerDetails{
+    .App-secondaryHeader{
       flex-direction: column;
-    }
+      width: 100%;
+
+      .burgerContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        
+        .hamburger{
+          cursor: pointer;
+          border: 1px solid white;
+
+          .line{
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background-color: white;
+          }
+        }
+      }
+
   
-    .subSubFooter{
+      .headerNav{
+        width: 100%;
+        clip-path: circle(0px at 90% -10%);
+        -webkit-clip-path: circle(0px at 90% - 10%);
+        transition: 0.5s all ease-in;
+  
+        ul{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          color: white;
+          background-color: white;
+    
+          .header-links{
+            width: 100%;
+          }
+    
+        }
+      }
+
+      .active{
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% - 10%);
+
+      }
+
+    }
+  }
+  
+
+  footer{
+
+    .abosoluteFooter{
       flex-direction: column;
-      text-align: center;
-  
-      .footerLocations{
-        margin: 40px 0;
+      width: 100%;
+
+      .intro{
+        width: 100%;
+        text-align: center;
+
       }
+
+    }
+
+    .subFooter{
+      width: 100%;
   
-      .footerSocials{
-        margin: 40px 0;
+      .footerDetails{
+        flex-direction: column;
+      }
+    
+      .subSubFooter{
+        flex-direction: column;
+        text-align: center;
+    
+        .footerLocations{
+          margin: 40px 0;
+        }
+    
+        .footerSocials{
+          margin: 40px 0;
+        }
       }
     }
+    
   }
 
   

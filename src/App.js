@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import {
@@ -18,17 +18,72 @@ import Location from './JScomponents/location';
 import ContactUs from './JScomponents/contactUs';
 
 function App() {
+
+  const [state, setState] = useState(()=> ({
+    vh: window.innerHeight,
+    navClass: "headerNav"
+  }))
+
+  useEffect(()=>{
+
+    console.log("123")
+
+    window.addEventListener("resize", (e)=>{
+        setState(ps => ({...ps, vh: window.innerHeight}))
+
+            console.log(window.innerHeight)
+    })
+
+
+    // let timeline = gsap.timeline({defaults:{duration:1}})
+    // timeline
+    // .from("header", {y:"-100%", opacity: 0})
+    // .from(".footer", {x:"100%"},"<")
+
+}, [])
+
+
+const burger = (e) => {
+  
+
+  if (state.navClass === "headerNav active"){
+    console.log(state.navClass)
+
+    return setState(ps => ({...ps, navClass: "headerNav"}))
+  }
+
+  else{
+    console.log(state.navClass)
+
+    return setState(ps => ({...ps, navClass: "headerNav active"}))
+  }
+
+}
+
+
+
   return (
     <div className="App">
       <header className="App-header">
 
       <div className="App-secondaryHeader">
 
-      <div className="headerLogoContainer">
+      <div className="burgerContainer">
         <Link to="/" ><img className="headerLogo" src="/assets/shared/desktop/logo-dark.png" /></Link>
+
+        <div className="hamburger" onClick={burger}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </div>
 
-      <nav className="headerNav">
+
+
+      <nav className={state.navClass} >
+
+
+
         <ul>
           <Link className="header-links" to={"/"}>HOME</Link>
           <Link className="header-links" to={"/our-company"}>OUR COMPANY</Link>
@@ -44,7 +99,7 @@ function App() {
       </header>
 
 
-      {/* <Switch>
+      <Switch>
           <Route exact={true} path="/" render={()=>(
             <Home />
           )}  />
@@ -79,13 +134,13 @@ function App() {
 
          
     </Switch>
-       */}
+      
 
 
 
       <footer>
 
-         {/* <div className="abosoluteFooter">
+         <div className="abosoluteFooter">
           <div className="intro">
             <h1>Let's talk about your project</h1>
             <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
@@ -93,7 +148,7 @@ function App() {
 
           <a className="contactBtn" href="mailto:adanehenock@gmail.com" target="_blank">GET IN TOUCH</a>
 
-        </div>  */}
+        </div> 
 
         <div className="subFooter">
 
