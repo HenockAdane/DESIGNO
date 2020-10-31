@@ -224,6 +224,7 @@ footer{
   .App-header{
     background-color: #E7816B;
 
+
     .App-secondaryHeader{
       flex-direction: column;
       width: 100%;
@@ -249,12 +250,15 @@ footer{
 
   
       .headerNav{
+        position: relative;
+        height: 0px;
         width: 100%;
-        clip-path: circle(0px at 90% -10%);
-        -webkit-clip-path: circle(0px at 90% - 10%);
-        transition: 0.5s all ease-in;
+        clip-path: ellipse(0% 0% at 10% 20%);
+        -webkit-clip-path: ellipse(0px 0px at 10% 20%);
+        transition: 0.3s all ease-in;
   
         ul{
+          position: absolute;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -266,15 +270,19 @@ footer{
     
           .header-links{
             width: 100%;
+
+            &:hover{
+              animation: unset;
+            }
           }
     
         }
       }
 
       .active{
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% - 10%);
-
+        height: unset;
+        clip-path: ellipse(100% 100vw at 10% 20%);
+        -webkit-clip-path: ellipse(100% 100vw at 10% 20%);
       }
 
     }
@@ -300,11 +308,24 @@ footer{
   
       .footerDetails{
         flex-direction: column;
+
+        .footer-links{
+          &:hover{
+            animation: unset;
+          }
+        }
       }
     
       .subSubFooter{
         flex-direction: column;
         text-align: center;
+
+        .footerContacts a{
+          &:hover{
+            animation: unset;
+          }
+
+        }
     
         .footerLocations{
           margin: 40px 0;
@@ -312,6 +333,12 @@ footer{
     
         .footerSocials{
           margin: 40px 0;
+
+          .socials-links{
+            &:hover{
+              transform: unset;
+            }
+          }
         }
       }
     }
